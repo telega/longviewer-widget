@@ -30,14 +30,14 @@ update: (output, domEl) ->
       <span class = 'label'>Available Updates: </span>#{key.packageUpdates} <br>
       <span class = 'label'>Uptime: </span>#{key.uptime}<br>
       <span class = 'label'>CPU: </span>#{key.cpuType}<br>
-      <span class = 'label'>CPU Usage: </span>#{key.cpuTotal} <span class = 'label'> Load: </span> #{key.load} + <br>
+      <span class = 'label'>CPU Usage: </span>#{key.cpuTotal} <span class = 'label'> Load: </span> #{key.load} <br>
       <span class = 'label'>Memory: </span>#{key.realMemUsed} / #{key.realMem} ( #{key.realMemUsedPercent} )<br>
       <span class = 'label'>Disk: </span>#{key.fsUsed} / #{key.fsFree} (#{key.fsUsedPercent})<br>
       <span class = 'label'>Network In: </span>#{key.rxBytes} <span class = "label">Out: </span>#{key.txBytes} 
     """
     if key.lastUpdated != 0
       el.append """
-        <br><span class = 'label warn'>Last Updated: </span>#{key.lastUpdated}</span>
+        <span class = 'warn'>#{key.lastUpdated}</span>
         """
     el.append """
       </div>
